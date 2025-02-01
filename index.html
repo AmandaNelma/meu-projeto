@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="love-text" id="loveText">Eu te amo</div>
+    <div class="heart-container"></div>
+
+    <!-- Áudio de fundo com o atributo autoplay e muted -->
+    <audio id="background-music" src="meu-audio.mp3" autoplay loop muted></audio>
+
+    <script src="script.js"></script>
+
+    <script>
+        const music = document.getElementById("background-music");
+
+        // Evento de clique para desmutar e tocar o áudio
+        document.body.addEventListener("click", () => {
+            if (music.muted) {
+                music.muted = false; // Desmutar o áudio
+                music.play(); // Tocar o áudio
+            }
+        });
+    </script>
+</body>
+</html>
